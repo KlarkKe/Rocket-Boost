@@ -10,15 +10,31 @@ public class CollisionHandler : MonoBehaviour
             case "Friendly":
                 Debug.Log("One Message");
                 break;
-            case "Fuel":
-                Debug.Log("I got a fuel");
-                break;
             case "Finish":
-                Debug.Log("I finished");
-                SceneManager.LoadScene(0);
+                LoadNextLevel();
                 break;
             default:
+                ReloadLevel();
                 break;
+        }
+
+        void ReloadLevel()
+        {
+            int currentScene = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentScene);
+        }
+
+        void LoadNextLevel()
+        {
+            int currentScene = SceneManager.GetActiveScene().buildIndex;
+            int nextScene = currentScene + 1;
+
+            if (nextScene == SceneManager.sceneCountInBuildSettings)
+            {
+                nextScene = 0;
+            }
+
+            SceneManager.LoadScene(nextScene);
         }
     }
 }

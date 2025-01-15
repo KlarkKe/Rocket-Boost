@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SandBox.unity
+    path: Assets/Scenes/Over.unity
     guid: 234e20e98eb6ccd4fa8ff6c2e234d6b3
+  - enabled: 1
+    path: Assets/Scenes/Under.unity
+    guid: 6cfbaea9f8000354e80d217e776cd852
+  - enabled: 1
+    path: Assets/Scenes/Through.unity
+    guid: 31686774f4010c0478a569a0d20171c3
+  - enabled: 1
+    path: Assets/Scenes/Through_1.unity
+    guid: 6551318c97069754eba8d5489febbcba
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
