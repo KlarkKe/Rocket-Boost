@@ -63,6 +63,7 @@ public class Movement : MonoBehaviour
         else
         {
             audio_s.Stop();
+            Debug.Log("Audio Starded");
         }
     }
 }
