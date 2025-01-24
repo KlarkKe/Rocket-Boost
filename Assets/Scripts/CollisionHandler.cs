@@ -5,9 +5,22 @@ using System;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] private float levelLoadDelay = 2f;
+    [SerializeField] AudioClip deathExposion;
+    [SerializeField] AudioClip success;
+
+    AudioSource audio_s;
+
+    bool isControllable = true;
+
+    private void Start()
+    {
+        audio_s = GetComponent<AudioSource>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!isControllable) { return; }
+
         switch (collision.gameObject.tag)
         {
             case "Friendly":
@@ -25,12 +38,20 @@ public class CollisionHandler : MonoBehaviour
     private void StartFinishSequence()
     {
         //todo add sfx and particles
+        isControllable = false;
+        audio_s.Stop();
+        audio_s.PlayOneShot(success);
+
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", levelLoadDelay);
     }
 
     private void StartCrashSequence()
     {
+        isControllable = false;
+        audio_s.Stop();
+        audio_s.PlayOneShot(deathExposion);
+
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", 2f);
     }

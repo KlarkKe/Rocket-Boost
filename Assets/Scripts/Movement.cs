@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] InputAction rotation;
     [SerializeField] float thrustStrength = 100f;
     [SerializeField] float rotationStrength = 100f;
+    [SerializeField] AudioClip mainEngine;
 
     Rigidbody rb;
     AudioSource audio_s;
@@ -57,7 +58,7 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime); //Vector3.up тоже самое если б аргументом был (0, 1, 0) //Relative, а не обычный форс потомучто сила добавляется исходя из локальных осей что нам и нужно при поворотах и т.п.
             if (!audio_s.isPlaying)
             {    
-                audio_s.Play();
+                audio_s.PlayOneShot(mainEngine);
             }
         }
         else
