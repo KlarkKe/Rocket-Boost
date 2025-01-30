@@ -72,7 +72,7 @@ MonoBehaviour:
       m_Flags: 0
     - m_Name: 
       m_Id: e4ca5549-3d6c-4dbe-a9ad-4d2d5fa4879e
-      m_Path: <Gamepad>/buttonSouth
+      m_Path: <Gamepad>/rightTrigger
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -136,8 +136,8 @@ MonoBehaviour:
       m_Action: Rotation
       m_Flags: 8
     m_Flags: 0
-  thrustStrength: 1000
-  rotationStrength: 100
+  thrustStrength: 700
+  rotationStrength: 110
   mainEngine: {fileID: 8300000, guid: 833be231905649748ad779d99d9e6b91, type: 3}
   mainBooster: {fileID: 9007007781971580423}
   rightBooster: {fileID: 525793869370588817}
@@ -668,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4940884351362868, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.05
+      value: -0.958
       objectReference: {fileID: 0}
     - target: {fileID: 4940884351362868, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
       propertyPath: m_LocalPosition.z
@@ -701,6 +701,10 @@ PrefabInstance:
     - target: {fileID: 4940884351362868, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198100719057022332, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
