@@ -50,6 +50,9 @@ public class CollisionHandler : MonoBehaviour
             case "Finish":
                 StartFinishSequence();
                 break;
+            case "PickSubject":
+                Debug.Log("Pick me");
+                break;
             default:
                 StartCrashSequence();
                 break;

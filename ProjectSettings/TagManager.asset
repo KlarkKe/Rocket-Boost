@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Friendly
   - Fuel
+  - PickSubject
   layers:
   - Default
   - TransparentFX
