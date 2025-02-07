@@ -3601,6 +3601,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aa840126f37030e459305ecd09c6f48f, type: 3}
   m_PrefabInstance: {fileID: 1045491779}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1347724649
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1579692668446596915, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_Name
+      value: Moving Piston
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -37.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208983389396796809, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1579692668446596915, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1888778656}
+  m_SourcePrefab: {fileID: 100100000, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
 --- !u!4 &1354093569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 151d34a463cbc19459a944508026bae6, type: 3}
@@ -3994,6 +4054,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: cb0fdf6f-84e4-4af7-8198-3390884dc951
       m_Path: <Gamepad>/leftTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Grabber
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ccefd427-b0ba-4554-ac88-1d672a225e16
+      m_Path: <Keyboard>/upArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -5004,6 +5072,25 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1696692361}
   m_SourcePrefab: {fileID: 100100000, guid: c8b15472361882840b1507d206e4dbc7, type: 3}
+--- !u!1 &1888778655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1579692668446596915, guid: b2af0bb3c791187429b15d6f76f0bddc, type: 3}
+  m_PrefabInstance: {fileID: 1347724649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888778656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888778655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f33ac7b4cf92b459b284800e4134b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: -14, z: 0}
+  speed: 1
 --- !u!1001 &1931098737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5667,3 +5754,4 @@ SceneRoots:
   - {fileID: 979561088}
   - {fileID: 2099924459}
   - {fileID: 1411430705}
+  - {fileID: 1347724649}
